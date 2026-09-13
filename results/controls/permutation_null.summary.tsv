@@ -1,0 +1,7 @@
+metric	value
+n_iterations	1000
+mean_auc	0.5000064599483204
+median_auc	0.5
+ci_low_2p5	0.2958656330749354
+ci_high_97p5	0.6977067183462531
+sd_auc	0.10647164635583066

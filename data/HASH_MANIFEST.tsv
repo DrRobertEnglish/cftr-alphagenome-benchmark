@@ -3,3 +3,4 @@
 # a documented, dated amendment in docs/protocol/AMENDMENTS.md.
 path	sha256
 data/reference/CFTR_ENST00000003084_11_exons_GRCh38.tsv	c519f8be2ac4e0fe6a0452818edb491a83bc2f0bd0cce2e63069dc4a48f49106
+data/variant_list_frozen.tsv	c87020af7f0726b17823db292bb10da44d21701b59768744fa2e5458cf7005a5
