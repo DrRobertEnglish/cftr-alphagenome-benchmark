@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Secrets — the AlphaGenome API key must NEVER be committed
+.env
+.env.local
+*.key
+credentials.json
+config/secrets*.yaml
+
+# Predictor caches
+data/reference/*.fasta
+data/reference/*.fai
+data/reference/*.gz
+data/reference/*.tbi
+models/
+*.ckpt
+*.h5
+
+# Runtime outputs (kept out of git until frozen and hashed for release)
+results/raw_predictions/
+results/intermediate/
+results/*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb  # keep repo script-first; convert notebooks to scripts before commit
