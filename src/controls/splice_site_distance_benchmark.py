@@ -40,7 +40,7 @@ def load_exon_boundaries(transcript_tsv: Path) -> list[tuple[int, int]]:
 
     Expected columns: exon_number, start, end (1-based inclusive, GRCh38 forward-strand).
     """
-    df = pd.read_csv(transcript_tsv, sep="\t")
+    df = pd.read_csv(transcript_tsv, sep="\t", comment="#")
     required = {"exon_number", "start", "end"}
     missing = required - set(df.columns)
     if missing:

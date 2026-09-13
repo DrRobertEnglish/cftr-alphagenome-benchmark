@@ -1,0 +1,5 @@
+# SHA-256 manifest of frozen inputs.
+# Rebuilding this file after the OSF registration date requires
+# a documented, dated amendment in docs/protocol/AMENDMENTS.md.
+path	sha256
+data/reference/CFTR_ENST00000003084_11_exons_GRCh38.tsv	c519f8be2ac4e0fe6a0452818edb491a83bc2f0bd0cce2e63069dc4a48f49106
