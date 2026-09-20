@@ -30,7 +30,44 @@ These are not protocol amendments — they add no new degrees of freedom over wh
 
 ### Substantive amendments
 
-#### 2026-09-20 — A1 licence-compliance controls (non-substantive; operationalises F1–F5)
+#### 2026-09-20 (later that day) — Amendment #2: report both DeepMind-recommended composite AND pre-registered per-junction rule as parallel primary analyses
+
+**Amendment number:** 2
+**Date:** 2026-09-20
+**OSF amendment DOI or link:** pending upload (draft in `docs/protocol/AMENDMENTS.md`)
+**Files changed:**
+- `docs/protocol/AMENDMENTS.md` (this entry)
+- `scripts/colab_alphagenome_scoring_v2.ipynb` (new; adds pre-registered-rule cells alongside composite-rule cells)
+- `scripts/prereg_scoring_cells.py` (new; source for the new cells with full design docstring)
+- `scripts/build_updated_colab_notebook.py` (new; deterministically builds the v2 notebook)
+- Following the Colab run: `results/predictions/alphagenome_prereg.tsv` (new), `data/HASH_MANIFEST.tsv` (updated), `docs/manuscript/methods_v0_2.md` (rewritten scoring section).
+
+**Rationale.** During pre-submission critical review of preprint v0.1, we discovered that the AlphaGenome scoring rule executed in the Colab notebook did not correspond to the rule written into the OSF pre-registration.
+
+The pre-registration specified: `AlphaGenome per-junction usage delta = |usage(REF) − usage(ALT)| at the canonical junction closest to the variant, default lung/bronchial epithelial cell context` ([OSF pre-registration v1.0](../protocol/osf_preregistration_v1.md), Predictors §1; [methodology v1.0](../protocol/methodology_v1.md) §4.1).
+
+The Colab notebook implemented: `max(splice_sites) + max(splice_site_usage) + max(splice_junctions) / 5`, aggregated across all tissues and genes by taking the maximum absolute score across all tracks and genes ([scripts/colab_alphagenome_scoring.ipynb](../../scripts/colab_alphagenome_scoring.ipynb), cell 8).
+
+The composite score was not chosen post-hoc: it is the DeepMind-documented recommended splicing composite specified verbatim in the [AlphaGenome FAQ](https://www.alphagenomedocs.com/faqs.html) ("How to score splicing variants") and in the [AlphaGenome splicing tutorial](https://www.alphagenomedocs.com/colabs/splicing_variant_scoring.html). Its provenance predates this study. However, the pre-registration did not specify this composite: it specified a narrower per-junction rule that only became partially implementable when the AlphaGenome SDK's actual output structure was inspected in detail (`SPLICE_SITE_USAGE` returns per-track magnitudes aggregated within a gene mask, not per-junction values; per-junction resolution requires the separate `SpliceJunctionScorer`, whose output does expose `junction_Start` and `junction_End` columns).
+
+We therefore adopt the following resolution, chosen after the researcher and the analysis pipeline both reviewed the situation:
+
+1. The DeepMind-recommended composite score is reported as **primary analysis (Rule A)**. It is defensible on the basis of DeepMind's own documentation and gives a reproducible, deterministic scoring procedure that any independent group can replicate.
+2. The OSF-preregistered per-junction rule is operationalised as **primary analysis (Rule B)** using the SpliceJunctionScorer with a pre-declared cell-context ontology set (see `scripts/prereg_scoring_cells.py` docstring) and a distance-to-variant tie-break. The exact ontology set — `{UBERON:0002048, UBERON:0002185, CL:0002145, CL:1000271, CL:0002632}` — is frozen in this amendment and cannot be adjusted post-hoc.
+3. **Both rules are reported side-by-side as parallel primary analyses.** Neither is designated "the" primary. The paper's Results section carries columns for each rule and the Discussion section addresses agreement and disagreement between them.
+4. Any variant for which Rule B yields no in-context tracks (i.e. no tracks in the pre-declared ontology set have per-junction data for the variant's interval) is recorded as `NA_no_cell_context` and excluded from Rule B analyses only; it remains in Rule A analyses. This exclusion criterion is frozen in this amendment.
+5. Multiplicity is addressed by pre-registering that inference from either rule (Rule A OR Rule B) is treated as one hypothesis test, i.e. the H1/H2/H3 alpha threshold applies to whichever rule the paper's inferential claim rests on for that hypothesis. When both rules give the same conclusion at nominal alpha, the finding is described as robust across scoring rules. When they differ, the disagreement is reported prominently and no unqualified inferential claim is made.
+
+**Effect on hypotheses.** H1, H2 and H3 (as pre-registered) are executed twice: once with Rule A scores as the AlphaGenome predictor, once with Rule B scores. The decision rules themselves (paired DeLong for H1 and H2, Spearman for H3) are unchanged. This is a **supplementation** rather than a replacement in the sense of the format above: the pre-registered rule is retained (as Rule B) and an additional pre-declared rule (Rule A) is added.
+
+**Compliance with A1.1 (summary-statistics-only rule).** The `sj / 5` weighting in Rule A is not a fitted parameter — it is a fixed weight taken from DeepMind's documentation. Neither rule involves training or fitting a model on AlphaGenome output. Both rules produce a single scalar per variant that then enters standard rank-order statistics. Rule A therefore does not tension A1.1.
+
+**Time-order note.** This amendment is filed **after** the discovery of the deviation but **before** any pre-registered-rule scores exist. The pre-registered-rule (Rule B) TSV is generated only after this amendment is committed. Rule A scores already exist in `results/predictions/alphagenome.tsv` (SHA-256 recorded 2026-09-15). The paper's analysis code will be re-run once Rule B scores are in the repository.
+
+---
+
+**Amendment number:** 1
+**Date:** 2026-09-20
 
 Context. On 2026-09-14 the researcher sent a courtesy notification to the AlphaGenome team at Google DeepMind describing the pre-registered study and asking whether computing and publishing rank-order ROC-AUC on AlphaGenome outputs fell within the AlphaGenome Model Parameters Terms of Use and the AlphaGenome Output Terms of Use for a non-commercial academic user affiliated with an NHS trust. On 2026-09-15 the AlphaGenome team replied declining to provide legal advice and recommending independent legal review (see the OSF project record for the full correspondence). No further correspondence has been received.
 
