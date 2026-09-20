@@ -83,3 +83,4 @@ results/*.log
 
 # Smoke-test artefacts (mechanics test only, not scientific outputs)
 results/smoke/
+.env
