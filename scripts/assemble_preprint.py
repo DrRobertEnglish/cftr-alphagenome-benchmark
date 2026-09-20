@@ -16,17 +16,17 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 MS = REPO / "docs" / "manuscript"
-OUT = MS / "preprint_v0_1.md"
+OUT = MS / "preprint_v0_2.md"
 
 # Section order for the final preprint. Titles are rewritten to preprint-
 # standard H1 headings; each source file's own top-level H1 is stripped
 # because the preprint has one title and one H1 per section.
 SECTIONS: list[tuple[str, str]] = [
-    ("abstract_v0_1.md", "Abstract"),
-    ("introduction_v0_1.md", "Introduction"),
-    ("methods_v0_1.md", "Methods"),
-    ("results_section_v0_1.md", "Results"),
-    ("discussion_and_clinical_v0_1.md", "Discussion"),
+    ("abstract_v0_2.md", "Abstract"),
+    ("introduction_v0_2.md", "Introduction"),
+    ("methods_v0_2.md", "Methods"),
+    ("results_section_v0_2.md", "Results"),
+    ("discussion_and_clinical_v0_2.md", "Discussion"),
 ]
 
 TITLE = (
