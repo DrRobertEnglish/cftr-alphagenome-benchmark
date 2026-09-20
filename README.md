@@ -49,13 +49,16 @@ cftr-alphagenome-benchmark/
 
 ## Model licence positioning
 
-AlphaGenome is used under its [non-commercial academic research licence](https://storage.googleapis.com/alphagenome/terms/AlphaGenome-Model-Terms-of-Use.pdf). This repository operates within that scope:
+AlphaGenome is used under the [AlphaGenome Model Parameters Terms of Use](https://storage.googleapis.com/alphagenome/terms/AlphaGenome-Model-Terms-of-Use.pdf). AlphaGenome output and any output derivatives are provided under and subject to the [AlphaGenome Output Terms of Use](https://deepmind.google.com/science/alphagenome/output-terms); the conspicuous notice required by those terms is included at [`LEGALLY_BINDING_ALPHAGENOME_OUTPUT_TERMS.txt`](LEGALLY_BINDING_ALPHAGENOME_OUTPUT_TERMS.txt) at the root of this repository.
 
-- No downstream ML model is trained on AlphaGenome outputs.
-- No clinical-decision framing is asserted in code or documentation.
+This repository operates within the non-commercial academic scope:
+
+- No downstream ML model is trained, fitted, or calibrated on AlphaGenome outputs. Analyses computed on AlphaGenome outputs are restricted to ROC-AUC, paired DeLong confidence intervals, Spearman rank correlation with bootstrap confidence intervals, and descriptive expressivity tallies.
+- No clinical-decision framing is asserted in code, documentation, or downstream manuscripts. The pre-registered banned-word list is enforced.
 - No patient genomes are queried against AlphaGenome; all inputs are peer-reviewed public literature variants.
+- The corresponding author is affiliated with Barts Health NHS Trust, a non-commercial organisation within the Terms' definition. The work is unfunded by any commercial organisation.
 
-A courtesy notification has been sent to the AlphaGenome team at `alphagenome@google.com`. If a licence-scope response before submission indicates that rank-order AUC computation on AlphaGenome outputs falls outside permitted use, the pre-registered contingency is invoked: all AlphaGenome AUC and paired-test results are withheld and the manuscript is reduced to an expressivity tally.
+A courtesy notification was sent to the AlphaGenome team at `alphagenome@google.com` on 2026-09-14. The AlphaGenome team replied on 2026-09-15 that they do not provide legal advice and recommended independent legal review. The study proceeds under the researchers' non-commercial-academic-affiliation reading of the two Terms documents; the compliance controls that operationalise this decision are recorded in [`docs/protocol/AMENDMENTS.md`](docs/protocol/AMENDMENTS.md) (entry A1, 2026-09-20) and the Methods paragraph drafted in [`docs/protocol/methods_licence_paragraph.md`](docs/protocol/methods_licence_paragraph.md). The pre-registered expressivity-only fallback remains available at any point up to submission if either the AlphaGenome team communicates an explicit restriction or an independent legal opinion advises against publication of rank-order metrics.
 
 ## Reproducibility
 

@@ -1,0 +1,47 @@
+LEGALLY BINDING TERMS OF USE — AlphaGenome Output and Output Derivatives
+========================================================================
+
+This repository, and any preprint, manuscript, supplementary file, or
+data release derived from it, includes AlphaGenome Output and/or
+Output Derivatives as defined in the AlphaGenome Output Terms of Use.
+
+By using this information, you agree to the AlphaGenome Output Terms
+of Use found at:
+
+    https://deepmind.google.com/science/alphagenome/output-terms
+
+Summary of key restrictions (see the full Terms at the URL above for the
+authoritative text):
+
+  1. Output and Derivatives may only be used for non-commercial purposes,
+     by individuals or non-commercial organizations. Journalism is
+     permitted. Commercial use, or use on behalf of a commercial
+     organization, is not permitted.
+
+  2. Output and Derivatives may not be used to train machine learning
+     models, except as expressly permitted under the AlphaGenome Model
+     Parameters Terms of Use.
+
+  3. Any republication or redistribution of Output or Derivatives must
+     carry conspicuous notice that they are provided under and subject
+     to the AlphaGenome Output Terms of Use, together with notice of
+     any modifications made to Output.
+
+  4. Output and Derivatives must not be used to misinform, misrepresent,
+     or mislead, including through misleading claims of expertise or
+     capability in sensitive areas such as health, or through decisions
+     that affect material or individual rights or well-being such as
+     healthcare.
+
+  5. Output and Derivatives are for theoretical modelling only. They
+     are not intended, validated, or approved for clinical use, and
+     must not be used for clinical purposes or relied on for medical
+     or professional advice.
+
+This repository does not modify AlphaGenome Output. AlphaGenome Output
+is used only to compute summary discrimination statistics (ROC-AUC and
+paired DeLong confidence intervals) and rank-correlation statistics
+(Spearman rho with bootstrap confidence intervals) against experimentally
+measured splicing outcomes from published CFTR variant studies. No
+machine learning model is trained, fitted, or calibrated on AlphaGenome
+Output within this repository or its derived publications.

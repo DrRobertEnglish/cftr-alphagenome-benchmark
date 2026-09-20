@@ -30,7 +30,23 @@ These are not protocol amendments — they add no new degrees of freedom over wh
 
 ### Substantive amendments
 
-*None yet — protocol is at v1.0 as registered on 2026-09-13.*
+#### 2026-09-20 — A1 licence-compliance controls (non-substantive; operationalises F1–F5)
+
+Context. On 2026-09-14 the researcher sent a courtesy notification to the AlphaGenome team at Google DeepMind describing the pre-registered study and asking whether computing and publishing rank-order ROC-AUC on AlphaGenome outputs fell within the AlphaGenome Model Parameters Terms of Use and the AlphaGenome Output Terms of Use for a non-commercial academic user affiliated with an NHS trust. On 2026-09-15 the AlphaGenome team replied declining to provide legal advice and recommending independent legal review (see the OSF project record for the full correspondence). No further correspondence has been received.
+
+Decision. The study proceeds under the researcher's non-commercial-academic-affiliation reading of the two AlphaGenome terms documents, on the basis that (a) NHS trusts fall within the Model Terms' definition of non-commercial organisations ("universities, non-profit organizations and research institutes, educational, journalism and government bodies"), (b) neither the Model Terms nor the Output Terms contain any clause restricting benchmarking, evaluation, comparison to other models, or publication of quantitative metrics computed on AlphaGenome output, and (c) the pre-registered analysis plan computes only summary discrimination and rank statistics and does not fit any learned function of AlphaGenome output.
+
+Compliance controls. The following controls are recorded on this date and applied to all subsequent work in this repository, all preprint and journal submissions, and all supplementary data releases:
+
+- **A1.1 Summary-statistics-only rule.** Analyses computed on AlphaGenome output are restricted to ROC-AUC, paired DeLong confidence intervals, Spearman rank correlation with bootstrap confidence intervals, and descriptive expressivity tallies. No logistic regression, calibration, isotonic regression, meta-classifier, ensemble, or other parameter fitting is applied to AlphaGenome output. This operationalises firewall F1.
+- **A1.2 Conspicuous notice.** The repository contains a `LEGALLY_BINDING_ALPHAGENOME_OUTPUT_TERMS.txt` file at its root, linked from the README, quoting the notice text prescribed by Model Terms Section 3(c) and Output Terms Section 3 and referencing the Output Terms URL. Any supplementary file containing per-variant AlphaGenome scores or AlphaGenome-derived statistics is accompanied by a reference to this notice.
+- **A1.3 Non-clinical framing.** The Methods section of the manuscript will quote the Model Terms Section 8 disclaimer verbatim, will state that the paper is theoretical modelling only, will state that no machine learning model is trained on AlphaGenome output, and will reference the Output Terms URL. The pre-registered banned-word list continues to be enforced across the full manuscript.
+- **A1.4 Non-commercial affiliation record.** The researcher's non-commercial affiliation (Barts Health NHS Trust) is recorded on the OSF project. The study is not funded by any commercial organisation and produces no output for the benefit of any commercial organisation.
+
+Degrees of freedom added. None. A1 does not change the frozen variant list, the pre-registered hypotheses, the pre-registered outcome definitions, or the pre-registered analysis plan. It records the operational compliance controls under which the pre-registered plan is executed.
+
+Pre-registered fallback status. The fallback path in Section 9 ("Publish expressivity-only report if DeepMind licence clarification denies rank-statistic use") is not invoked because the AlphaGenome reply did not deny rank-statistic use — it declined to make any legal determination. The fallback remains available at any point up to submission if, before then, either the AlphaGenome team communicates an explicit restriction or an independent legal opinion advises against publication of rank-order metrics.
+
 
 ## Predictor scoring log (informational, not amendments)
 
