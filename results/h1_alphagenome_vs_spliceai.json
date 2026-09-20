@@ -1,0 +1,58 @@
+{
+  "label_a": "AlphaGenome",
+  "label_b": "SpliceAI",
+  "coverage": {
+    "n_stratum2": 52,
+    "n_paired": 52,
+    "n_missing_a": 0,
+    "n_missing_b": 0,
+    "n_pos": 43,
+    "n_neg": 9
+  },
+  "paired_delong": {
+    "auc_a": 1.0,
+    "auc_b": 0.9819121447028425,
+    "auc_diff": 0.018087855297157507,
+    "variance": 0.00022797012160632118,
+    "std_error": 0.015098679465646032,
+    "ci_lower": -0.011505012669623185,
+    "ci_upper": 0.0476807232639382,
+    "z": 1.197975977853741,
+    "p_value": 0.23092636904903197,
+    "n_pos": 43,
+    "n_neg": 9
+  },
+  "h1_superiority": {
+    "alpha": 0.05,
+    "auc_diff": 0.018087855297157507,
+    "p_value": 0.23092636904903197,
+    "superior": false,
+    "decision": "not superior"
+  },
+  "h2_non_inferiority": {
+    "margin": 0.05,
+    "ci_lower": -0.011505012669623185,
+    "ci_upper": 0.0476807232639382,
+    "non_inferior": true,
+    "decision": "non-inferior"
+  },
+  "bootstrap": {
+    "iters": 10000,
+    "seed": 20260913,
+    "a": {
+      "auc_median": 1.0,
+      "ci_low_2p5": 1.0,
+      "ci_high_97p5": 1.0
+    },
+    "b": {
+      "auc_median": 0.9844961240310078,
+      "ci_low_2p5": 0.9431524547803617,
+      "ci_high_97p5": 1.0
+    }
+  },
+  "provenance": {
+    "test_implementation": "src.analyse.paired_delong (Sun & Xu 2014)",
+    "variant_list": "data/variant_list_frozen.tsv",
+    "osf_doi": "10.17605/OSF.IO/6PGX8"
+  }
+}

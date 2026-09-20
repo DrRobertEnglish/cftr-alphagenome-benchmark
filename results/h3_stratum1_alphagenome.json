@@ -1,0 +1,27 @@
+{
+  "label": "AlphaGenome",
+  "n_variants": 8,
+  "spearman_rho": -0.6586944440522925,
+  "bootstrap": {
+    "rho_median": -0.6296296296296297,
+    "ci_low_2p5": -0.9813067629253164,
+    "ci_high_97p5": 0.10256410256410257,
+    "n_iters_defined": 9999,
+    "n_iters_total": 10000,
+    "seed": 20260913
+  },
+  "variant_ids": [
+    "S1_01_Masvidal",
+    "S1_02_Masvidal",
+    "S1_04_Joynt",
+    "S1_05_Joynt",
+    "S1_06_Joynt_WT",
+    "S1_07_Joynt",
+    "S1_08_ChibaFalek_lung",
+    "S1_09_Deletang"
+  ],
+  "provenance": {
+    "variant_list": "data/variant_list_frozen.tsv",
+    "osf_doi": "10.17605/OSF.IO/6PGX8"
+  }
+}
