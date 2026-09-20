@@ -110,7 +110,7 @@ def format_summary(
         lines.append(f"- {vid}")
     lines.append("")
     lines.append("## Pre-registration note")
-    lines.append("H3 is descriptive per the frozen OSF protocol. No p-value reported. Positive ρ means the predictor's continuous score increases as the fraction of normally spliced transcript decreases — the correct direction of association is fixed by the scoring convention documented in the predictor's own runner.")
+    lines.append("H3 is descriptive per the frozen OSF protocol. No p-value reported. The pre-specified expected direction is NEGATIVE Spearman ρ: higher predictor score (more splice-affecting) should track LOWER pct_normally_spliced (less healthy transcript). The correct direction of association is fixed by the scoring convention documented in the predictor's own runner.")
     return "\n".join(lines) + "\n"
 
 

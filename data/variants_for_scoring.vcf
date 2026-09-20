@@ -1,0 +1,68 @@
+##fileformat=VCFv4.2
+##fileDate=20260913
+##source=cftr-alphagenome-benchmark/src.harvest.build_scoring_vcf
+##reference=GRCh38 (Ensembl release 110, chr7 only)
+##INFO=<ID=variant_id,Number=1,Type=String,Description="Variant ID from data/variant_list_frozen.tsv">
+##INFO=<ID=stratum,Number=1,Type=String,Description="Study stratum (1=quantitative, 2=binary)">
+##contig=<ID=7,length=159345973>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+7	117504364	Joynt_I01	G	A	.	.	variant_id=Joynt_I01;stratum=2
+7	117504365	Joynt_I02	T	C	.	.	variant_id=Joynt_I02;stratum=2
+7	117504366	Joynt_I20	A	AT	.	.	variant_id=Joynt_I20;stratum=2
+7	117504391	Joynt_I35	A	G	.	.	variant_id=Joynt_I35;stratum=2
+7	117509031	Joynt_I21	C	T	.	.	variant_id=Joynt_I21;stratum=2
+7	117509032	Joynt_I03	A	G	.	.	variant_id=Joynt_I03;stratum=2
+7	117509035	Joynt_E01	G	A	.	.	variant_id=Joynt_E01;stratum=2
+7	117509143	Joynt_I04	G	A	.	.	variant_id=Joynt_I04;stratum=2
+7	117509145	Joynt_I22	A	C	.	.	variant_id=Joynt_I22;stratum=2
+7	117530897	Joynt_I06	A	G	.	.	variant_id=Joynt_I06;stratum=2
+7	117530898	Joynt_I05	G	A	.	.	variant_id=Joynt_I05;stratum=2
+7	117530899	Joynt_E02	G	A	.	.	variant_id=Joynt_E02;stratum=2
+7	117531079	Joynt_E07	A	G	.	.	variant_id=Joynt_E07;stratum=2
+7	117531115	Joynt_I07	G	T	.	.	variant_id=Joynt_I07;stratum=2
+7	117531117	Joynt_I23	A	G	.	.	variant_id=Joynt_I23;stratum=2
+7	117534309	Joynt_E08	A	G	.	.	variant_id=Joynt_E08;stratum=2
+7	117534366	Joynt_I08	G	T	.	.	variant_id=Joynt_I08;stratum=2
+7	117534368	Joynt_I24	A	G	.	.	variant_id=Joynt_I24;stratum=2
+7	117534368	Joynt_I25	A	C	.	.	variant_id=Joynt_I25;stratum=2
+7	117534368	Joynt_I26	A	T	.	.	variant_id=Joynt_I26;stratum=2
+7	117534370	Joynt_I27	G	A	.	.	variant_id=Joynt_I27;stratum=2
+7	117535247	S1_01_Masvidal	G	T	.	.	variant_id=S1_01_Masvidal;stratum=1
+7	117535248	Joynt_E03	G	A	.	.	variant_id=Joynt_E03;stratum=2
+7	117535249	Joynt_E04	G	T	.	.	variant_id=Joynt_E04;stratum=2
+7	117559656	Joynt_I09	G	A	.	.	variant_id=Joynt_I09;stratum=2
+7	117587738	Joynt_I10	G	A	.	.	variant_id=Joynt_I10;stratum=2
+7	117589467	S1_09_Deletang	A	G	.	.	variant_id=S1_09_Deletang;stratum=1
+7	117602800	Joynt_I36	A	G	.	.	variant_id=Joynt_I36;stratum=2
+7	117602865	Joynt_I28	T	TA	.	.	variant_id=Joynt_I28;stratum=2
+7	117602868	Joynt_I29	G	A	.	.	variant_id=Joynt_I29;stratum=2
+7	117602868	S1_02_Masvidal	G	A	.	.	variant_id=S1_02_Masvidal;stratum=1
+7	117603530	Joynt_I12	A	G	.	.	variant_id=Joynt_I12;stratum=2
+7	117603531	Joynt_I11	G	C	.	.	variant_id=Joynt_I11;stratum=2
+7	117603690	Joynt_E09	A	G	.	.	variant_id=Joynt_E09;stratum=2
+7	117603782	Joynt_E11	G	C	.	.	variant_id=Joynt_E11;stratum=2
+7	117603782	Joynt_E12	G	A	.	.	variant_id=Joynt_E12;stratum=2
+7	117603782	S1_04_Joynt	G	C	.	.	variant_id=S1_04_Joynt;stratum=1
+7	117603782	S1_05_Joynt	G	A	.	.	variant_id=S1_05_Joynt;stratum=1
+7	117606674	Joynt_E05	G	A	.	.	variant_id=Joynt_E05;stratum=2
+7	117606674	S1_06_Joynt_WT	G	A	.	.	variant_id=S1_06_Joynt_WT;stratum=1
+7	117606754	Joynt_I13	G	A	.	.	variant_id=Joynt_I13;stratum=2
+7	117614714	Joynt_I30	G	GT	.	.	variant_id=Joynt_I30;stratum=2
+7	117614718	Joynt_I31	G	A	.	.	variant_id=Joynt_I31;stratum=2
+7	117627520	Joynt_I14	A	G	.	.	variant_id=Joynt_I14;stratum=2
+7	117627753	Joynt_E10	A	G	.	.	variant_id=Joynt_E10;stratum=2
+7	117627770	Joynt_E13	G	C	.	.	variant_id=Joynt_E13;stratum=2
+7	117627771	Joynt_I15	G	A	.	.	variant_id=Joynt_I15;stratum=2
+7	117627774	Joynt_I32	A	G	.	.	variant_id=Joynt_I32;stratum=2
+7	117627775	Joynt_I33	G	A	.	.	variant_id=Joynt_I33;stratum=2
+7	117627810	Joynt_I37	A	G	.	.	variant_id=Joynt_I37;stratum=2
+7	117639961	S1_08_ChibaFalek_lung	C	T	.	.	variant_id=S1_08_ChibaFalek_lung;stratum=1
+7	117642435	Joynt_I34	T	G	.	.	variant_id=Joynt_I34;stratum=2
+7	117642437	Joynt_I16	G	A	.	.	variant_id=Joynt_I16;stratum=2
+7	117642439	Joynt_E06	T	G	.	.	variant_id=Joynt_E06;stratum=2
+7	117642592	Joynt_E14	A	G	.	.	variant_id=Joynt_E14;stratum=2
+7	117642593	Joynt_E15	G	C	.	.	variant_id=Joynt_E15;stratum=2
+7	117642593	S1_07_Joynt	G	C	.	.	variant_id=S1_07_Joynt;stratum=1
+7	117642594	Joynt_I17	G	A	.	.	variant_id=Joynt_I17;stratum=2
+7	117642595	Joynt_I18	T	C	.	.	variant_id=Joynt_I18;stratum=2
+7	117665566	Joynt_I19	T	C	.	.	variant_id=Joynt_I19;stratum=2

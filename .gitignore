@@ -49,14 +49,28 @@ htmlcov/
 credentials.json
 config/secrets*.yaml
 
-# Predictor caches
+# Predictor caches — reference genomes and annotation DBs are reproducibly
+# downloaded via src/harvest/download_reference.py (hash-pinned).
+data/reference/*.fa
 data/reference/*.fasta
 data/reference/*.fai
+data/reference/*.fxi
+data/reference/*.fxi.gz
 data/reference/*.gz
 data/reference/*.tbi
+data/reference/gencode/*.db
+data/reference/gencode/*.gtf
+data/reference/gencode/*.gtf.gz
 models/
 *.ckpt
 *.h5
+
+# Predictor Python environment (isolated stack for TF+PyTorch legacy pins)
+.venv-predictors/
+
+# Raw predictor intermediate VCFs (parsed into results/predictions/*.tsv)
+results/predictions/*_raw.vcf
+results/predictions/*_raw
 
 # Runtime outputs (kept out of git until frozen and hashed for release)
 results/raw_predictions/

@@ -31,6 +31,7 @@ MANIFEST_PATH = REPO_ROOT / "data" / "HASH_MANIFEST.tsv"
 TRACKED_FILES: list[str] = [
     "data/reference/CFTR_ENST00000003084_11_exons_GRCh38.tsv",
     "data/variant_list_frozen.tsv",
+    "data/variants_for_scoring.vcf",
 ]
 
 
