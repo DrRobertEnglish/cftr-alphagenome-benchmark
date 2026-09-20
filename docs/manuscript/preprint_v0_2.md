@@ -3,7 +3,7 @@
 **Robert English**  
 Barts Health NHS Trust, London, United Kingdom
 
-*Preprint version 0.1 — 20 September 2026*
+*Preprint version 0.2 — 20 September 2026*
 
 Correspondence: via the OSF project record ([osf.io/5hvgf](https://osf.io/5hvgf/) [1]).
 **Pre-registration.** OSF [osf.io/5hvgf](https://osf.io/5hvgf/) [1], DOI [10.17605/OSF.IO/6PGX8](https://doi.org/10.17605/OSF.IO/6PGX8) [2], registered 13 September 2026.

@@ -167,7 +167,7 @@ def main() -> None:
     parts: list[str] = []
     parts.append(f"# {TITLE}\n")
     parts.append(f"**{AUTHOR}**  \n{AFFILIATION}\n")
-    parts.append(f"*Preprint version 0.1 — {PREPRINT_DATE}*\n")
+    parts.append(f"*Preprint version 0.2 — {PREPRINT_DATE}*\n")
     parts.append(annotate_links(CORRESPONDENCE, registry))
     parts.append(annotate_links(OSF_LINE, registry))
     parts.append(annotate_links(CODE_LINE, registry))
