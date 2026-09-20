@@ -66,3 +66,6 @@ results/*.log
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb  # keep repo script-first; convert notebooks to scripts before commit
+
+# Smoke-test artefacts (mechanics test only, not scientific outputs)
+results/smoke/
